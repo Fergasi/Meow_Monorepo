@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: "http://meowmessenger.app",
+  baseURL: "https://meow-messenger-app.herokuapp.com",
   withCredentials: true,
 });
 
