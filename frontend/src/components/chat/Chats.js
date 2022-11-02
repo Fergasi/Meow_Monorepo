@@ -52,9 +52,9 @@ const Chats = ({ fetchAgain, setFetchAgain }) => {
 
   return (
     <div className='chats'>
-      {user && chats && (
+      {user && (
         <>
-          {chats.map((chat) => (
+          {(chats ? chats : []).map((chat) => (
             <div
               key={chat._id}
               className='userChat'
