@@ -39,6 +39,10 @@ const Chats = ({ fetchAgain, setFetchAgain }) => {
     fetchChats();
   }, [fetchAgain]);
 
+  useEffect(() => {
+    fetchChats();
+  }, []);
+
   const handleSelect = async (chat) => {
     fetchChats();
     setSelectedChat(chat);
