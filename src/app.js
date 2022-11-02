@@ -34,24 +34,6 @@ app.use(cookieParser());
 //body-parser for parsing JSON bodies
 app.use(bodyParser.json());
 
-// --------------------------deployment------------------------------
-
-const __dirname1 = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/frontend/build")));
-
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
-  );
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running..");
-  });
-}
-
-// --------------------------deployment------------------------------
-
 app.use("/api/user", userRouter);
 
 //Authorization Middleware
@@ -92,6 +74,24 @@ app.use(async (req, res, next) => {
 app.use("/api/chat", chatRouter);
 
 app.use("/api/message", messageRouter);
+
+// --------------------------deployment------------------------------
+
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
+
+// --------------------------deployment------------------------------
 
 const errorHandler = (error, req, res, next) => {
   if (res.headersSent) {
