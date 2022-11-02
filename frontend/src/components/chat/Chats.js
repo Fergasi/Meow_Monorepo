@@ -39,10 +39,6 @@ const Chats = ({ fetchAgain, setFetchAgain }) => {
     fetchChats();
   }, [fetchAgain]);
 
-  useEffect(() => {
-    fetchChats();
-  }, []);
-
   const handleSelect = async (chat) => {
     fetchChats();
     setSelectedChat(chat);
@@ -56,7 +52,7 @@ const Chats = ({ fetchAgain, setFetchAgain }) => {
 
   return (
     <div className='chats'>
-      {user && (
+      {user && chats.length > 0 && (
         <>
           {chats.map((chat) => (
             <div
