@@ -52,7 +52,7 @@ const Chats = ({ fetchAgain, setFetchAgain }) => {
 
   return (
     <div className='chats'>
-      {user && chats.length > 0 && (
+      {user && chats && (
         <>
           {chats.map((chat) => (
             <div
