@@ -161,7 +161,7 @@ const UserRegistrationPage = () => {
               <form action='submit' onSubmit={handleSubmit}>
                 <Box display='flex' flexDirection='column' alignItems='center'>
                   <FormControl sx={{ m: 1, width: "25ch" }} variant='outlined'>
-                    <InputLabel>Display Name</InputLabel>
+                    <InputLabel>Name</InputLabel>
                     <OutlinedInput
                       id='input-name'
                       value={userRegistrationForm.name}

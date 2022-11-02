@@ -42,7 +42,8 @@ app.use(async (req, res, next) => {
     const { session_token: sessionToken } = req.cookies;
 
     if (!sessionToken) {
-      return res.status(401).json({ message: "User not authenticated" });
+      return;
+      // res.status(401).json({ message: "User not authenticated" });
     }
 
     //this returns the jwt data or throws an eror
