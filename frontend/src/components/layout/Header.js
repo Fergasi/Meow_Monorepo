@@ -10,7 +10,7 @@ const Header = () => {
       <AppBar position='static' style={{ height: "64px" }}>
         <Toolbar>
           <Typography
-            variant='h4'
+            variant='h5'
             component='div'
             fontFamily='Pacifico, cursive'
             sx={{ paddingBottom: "10px" }}
