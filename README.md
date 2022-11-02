@@ -1,3 +1,3 @@
-# meow-messenger-backend
+# meow-messenger
 
-API for serving data to Meow Messenger instant messaging application
+Cat themed chat application using socket.io
