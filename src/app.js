@@ -25,10 +25,7 @@ mongoose
 app.use(
   cors({
     credentials: true,
-    origin: [
-      "https://meow-messenger-app.herokuapp.com",
-      "https://www.meowmessenger.app",
-    ],
+    origin: "https://www.meowmessenger.app",
   })
 );
 
@@ -117,10 +114,7 @@ const server = app.listen(port, () =>
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: [
-      "https://meow-messenger-app.herokuapp.com",
-      "https://www.meowmessenger.app",
-    ],
+    origin: "https://www.meowmessenger.app",
   },
 });
 

@@ -17,7 +17,7 @@ import Axios from "../../utils/Axios";
 import { CircularProgress } from "@mui/material";
 import { debounce } from "lodash";
 import io from "socket.io-client";
-const ENDPOINT = "https://meow-messenger-app.herokuapp.com";
+const ENDPOINT = "https://www.meowmessenger.app";
 var socket, selectedChatCompare;
 
 const Chat = ({ fetchAgain, setFetchAgain }) => {
