@@ -12,7 +12,7 @@ const Header = () => {
           <Typography
             variant='h4'
             component='div'
-            fontFamily='brush script MT'
+            fontFamily='Pacifico, cursive'
             sx={{ paddingBottom: "10px" }}
           >
             <img

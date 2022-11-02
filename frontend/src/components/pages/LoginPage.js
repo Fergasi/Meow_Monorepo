@@ -159,7 +159,7 @@ const LoginPage = () => {
             <Typography
               variant='h3'
               component='div'
-              fontFamily='brush script MT'
+              fontFamily='pacifico, cursive'
               sx={{ flexGrow: 1, paddingBottom: "5%" }}
             >
               Noooo don't go...

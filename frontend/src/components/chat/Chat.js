@@ -261,7 +261,7 @@ const Chat = ({ fetchAgain, setFetchAgain }) => {
           <Typography
             variant='h3'
             component='div'
-            fontFamily='brush script MT'
+            fontFamily='pacifico, cursive'
             color='white'
             fontWeight='100'
           >
